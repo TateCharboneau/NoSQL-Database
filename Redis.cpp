@@ -39,42 +39,42 @@ int main() {
     server.del("name");
     cout << "Get 'name' after delete: " << server.get("name") << endl;
 
+    // winsock load
     WSADATA wsaData;
     if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
         std::cerr << "WSAStartup failed." << std::endl;
-        return 1; // Handle error
+        return 1; // socket startup error handling
     }
 
-    // Step 2: Create a socket
+    // socket creation
     SOCKET serverSocket = socket(AF_INET, SOCK_STREAM, 0);
     if (serverSocket == INVALID_SOCKET) {
         std::cerr << "Socket creation failed." << std::endl;
         WSACleanup();
-        return 1; // Handle error
+        return 1; // socket creation error handling
     }
 
-    // Step 3: Bind the socket
+    // socket binding
     sockaddr_in serverAddr;
     serverAddr.sin_family = AF_INET;
-    serverAddr.sin_addr.s_addr = INADDR_ANY; // Accept connections from any IP address
-    serverAddr.sin_port = htons(8080); // In port
+    serverAddr.sin_addr.s_addr = INADDR_ANY; // connections from any ip address
+    serverAddr.sin_port = htons(8080); // in port 8080
 
     if (bind(serverSocket, (sockaddr*)&serverAddr, sizeof(serverAddr)) == SOCKET_ERROR) {
         std::cerr << "Bind failed." << std::endl;
         closesocket(serverSocket);
         WSACleanup();
-        return 1; // Handle error
+        return 1; // socket binding error handling
     }
 
-    // Step 4: Listen for connections
     if (listen(serverSocket, SOMAXCONN) == SOCKET_ERROR) {
         std::cerr << "Listen failed." << std::endl;
         closesocket(serverSocket);
         WSACleanup();
-        return 1; // Handle error
+        return 1; //socket connection error handling
     }
 
-    // Step 5: Accept connections in a loop
+    // accepting connections
     while (true) {
         sockaddr_in clientAddr;
         int clientAddrSize = sizeof(clientAddr);
@@ -82,27 +82,36 @@ int main() {
 
         if (clientSocket == INVALID_SOCKET) {
             std::cerr << "Accept failed." << std::endl;
-            continue; // Handle error, but keep running the server
+            continue; // invalid client socket handling
         }
 
-        // Step 6: Handle client communication (receive and send data)
+        // client communication - data handling
         char buffer[1024];
         int bytesReceived = recv(clientSocket, buffer, sizeof(buffer), 0);
         if (bytesReceived > 0) {
-            buffer[bytesReceived] = '\0'; // Null-terminate the received data
-            std::cout << "Received: " << buffer << std::endl;
+            buffer[bytesReceived] = '\0';
+            string userInput(buffer);
 
-            // Echo back the received data
-            send(clientSocket, buffer, bytesReceived, 0);
+            if(userInput.substr(0,3) == "SET") {
+
+
+            }
+            else if (userInput.substr(0,3) == "GET") {
+
+
+            }
+            else if (userInput.substr(0,3) == "DEL"){
+
+
+            }
         }
 
-        closesocket(clientSocket); // Close the client socket
+        closesocket(clientSocket); // close  client socket
     }
 
-    // Step 7: Clean up
+    // clean up
     closesocket(serverSocket);
     WSACleanup();
-
 
     return 0;
 }
