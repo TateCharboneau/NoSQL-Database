@@ -1,0 +1,3 @@
+C:/Users/Paran/Desktop/Redis Project/build/CMakeFiles/RedisProject.dir
+C:/Users/Paran/Desktop/Redis Project/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Paran/Desktop/Redis Project/build/CMakeFiles/ZERO_CHECK.dir

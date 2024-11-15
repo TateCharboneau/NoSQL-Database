@@ -1,0 +1,10 @@
+^C:\USERS\PARAN\DESKTOP\REDIS PROJECT\BUILD\CMAKEFILES\154FBA330E00E6755A478D7AAB5D5687\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Paran/Desktop/Redis Project" "-BC:/Users/Paran/Desktop/Redis Project/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Paran/Desktop/Redis Project/build/RedisProject.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

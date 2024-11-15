@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Paran\Desktop\Redis Project\build\CMakeFiles\154fba330e00e6755a478d7aab5d5687\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{B40B1030-A2D0-30E0-8B15-E42087BD68C4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
