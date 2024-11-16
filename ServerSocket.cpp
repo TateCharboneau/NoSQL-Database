@@ -74,49 +74,66 @@ void ServerSocket::run(RedisServer& server) {
 //handle client communication
 void ServerSocket::handleClient(SOCKET clientSocket, RedisServer& server) {
     char buffer[1024];
-    int bytesReceived = recv(clientSocket, buffer, sizeof(buffer), 0);
+    string userInput = "";
 
-    if (bytesReceived > 0) {
-        buffer[bytesReceived] = '\0';
-        string userInput(buffer);
+    while (true) {
+        int bytesReceived = recv(clientSocket, buffer, sizeof(buffer), 0);
 
-        if (userInput.substr(0, 3) == "SET") {
-            size_t spacePos = userInput.find(' ', 4);
-            string key = userInput.substr(4, spacePos - 4);
-            string value = userInput.substr(spacePos + 1);
+        if (bytesReceived > 0) {
+            buffer[bytesReceived] = '\0';  // Null-terminate received data
+            userInput.append(buffer);  // Add the received data to userInput string
 
-            server.set(key, value);
-            send(clientSocket, "OK", 2, 0);
-        }
-        
-        else if (userInput.substr(0, 3) == "GET") {
-            string key = userInput.substr(4);
-            string value = server.get(key);
+            // Check if newline is present, meaning the command is complete
+            size_t pos = userInput.find('\n');
+            if (pos != string::npos) {
+                userInput.erase(userInput.find_last_not_of("\r\n") + 1);  // Remove trailing whitespace
+                cout << "Received full command: " << userInput << endl;
 
-            if (value.empty()) {
-                send(clientSocket, "ERROR: No key found", 19, 0);
+                // Process the command
+                if (userInput.substr(0, 3) == "SET") {
+                    size_t spacePos = userInput.find(' ', 4);
+                    string key = userInput.substr(4, spacePos - 4);
+                    string value = userInput.substr(spacePos + 1);
+                    server.set(key, value);
+                    send(clientSocket, "OK", 2, 0);
+                }
+                else if (userInput.substr(0, 3) == "GET") {
+                    string key = userInput.substr(4);
+                    string value = server.get(key);
+                    if (value.empty()) {
+                        send(clientSocket, "ERROR: No key found", 19, 0);
+                    } else {
+                        send(clientSocket, value.c_str(), value.size(), 0);
+                    }
+                }
+                else if (userInput.substr(0, 3) == "DEL") {
+                    string key = userInput.substr(4);
+                    bool successful = server.del(key);
+                    if (successful) {
+                        send(clientSocket, "OK", 2, 0);
+                    } else {
+                        send(clientSocket, "ERROR: No key found", 19, 0);
+                    }
+                }
+                else {
+                    send(clientSocket, "ERROR: Unknown command", 22, 0);
+                }
+
+                // Clear the userInput buffer for the next command
+                userInput.clear();
             }
-            else {
-                send(clientSocket, value.c_str(), value.size(), 0);
-            }
-
-        }
-        
-        else if (userInput.substr(0, 3) == "DEL") {
-            string key = userInput.substr(4);
-            bool successful = server.del(key);
-
-            if (successful) {
-                send(clientSocket, "OK", 2, 0);
-            }
-            else {
-                send(clientSocket, "ERROR: No key found", 19, 0);
-            }
-
-        }
-        
+        } 
+        else if (bytesReceived == 0) {
+            // Connection closed gracefully by the client
+            cout << "Client disconnected." << endl;
+            break;
+        } 
         else {
-            send(clientSocket, "ERROR: Unknown command", 22, 0);
+            // Error receiving data
+            cerr << "Error receiving data from client." << endl;
+            break;
         }
     }
+
+    closesocket(clientSocket);  // Clean up the client socket after handling
 }
