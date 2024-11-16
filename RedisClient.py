@@ -1,8 +1,9 @@
 import socket
 
-# Server configuration
-HOST = '127.0.0.1'  # Server IP address (localhost for testing)
-PORT = 8080         # Port your server is running on
+
+# server configuration
+HOST = '127.0.0.1'  # server IP address (localhost for now)
+PORT = 8080         # server port
 
 def connect_to_server():
     """Establishes a connection to the server and returns the socket object."""
@@ -18,10 +19,10 @@ def connect_to_server():
 
 def send_command(client_socket, command):
     """Sends a command to the server and receives the response."""
-    # Append newline to command to signal end of command
+    # append newline to command to signal end of command
     client_socket.sendall(command.encode('utf-8') + b'\n')
     
-    # Receive and decode the response from the server
+    # receive and decode the response from the server
     response = client_socket.recv(1024).decode('utf-8')
     return response
 
@@ -32,15 +33,14 @@ def main():
 
     try:
         while True:
-            # Prompt for user input
+            # prompt for user input
             command = input("Enter command (or 'QUIT' to exit): ").strip()
             
-            # Exit if the user types 'QUIT'
             if command.upper() == "QUIT":
                 print("Closing connection and exiting.")
                 break
             
-            # Send the command to the server and receive the response
+            # send user input
             response = send_command(client_socket, command)
             print(f"Server response: {response}\n")
     

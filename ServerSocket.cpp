@@ -1,8 +1,8 @@
 #include "ServerSocket.hpp"
 #include <iostream>
 
-ServerSocket::ServerSocket() : serverSocket(INVALID_SOCKET) {}
 
+ServerSocket::ServerSocket() : serverSocket(INVALID_SOCKET) {}
 
 // destructor w/ cleanup
 ServerSocket::~ServerSocket() {
@@ -107,7 +107,7 @@ bool ServerSocket::handleClient(SOCKET clientSocket, RedisServer& server) {
                     string key = userInput.substr(4);
                     string value = server.get(key);
                     if (value.empty()) {
-                        send(clientSocket, "ERROR: No key found\n", 19, 0);
+                        send(clientSocket, "ERROR: No key found\r\n", 19, 0);
                     } else {
                         string response = value + "\n";
                         send(clientSocket, response.c_str(), response.size(), 0);
@@ -119,16 +119,16 @@ bool ServerSocket::handleClient(SOCKET clientSocket, RedisServer& server) {
                     if (successful) {
                         send(clientSocket, "OK\n", 2, 0);
                     } else {
-                        send(clientSocket, "ERROR: No key found\n", 19, 0);
+                        send(clientSocket, "ERROR: No key found\r\n", 19, 0);
                     }
                 }
                 else if (userInput == "QUIT") {
-                    send(clientSocket, "Closing connection. Goodbye!\n", 29, 0);
+                    send(clientSocket, "Closing connection. Goodbye!\r\n", 29, 0);
                     cout << "Client requested to quit. Closing connection." << endl;
                     break;
                 }
                 else {
-                    send(clientSocket, "ERROR: Unknown command\n", 22, 0);
+                    send(clientSocket, "ERROR: Unknown command\r\n", 22, 0);
                 }
                 
                 userInput.clear(); // clear the userInput buffer for the next command
@@ -136,12 +136,12 @@ bool ServerSocket::handleClient(SOCKET clientSocket, RedisServer& server) {
         } 
         else if (bytesReceived == 0) {
             // connection closed gracefully by the client
-            cout << "Client disconnected.\n" << endl;
+            cout << "Client disconnected.\r\n" << endl;
             break;
         } 
         else {
             // error receiving data
-            cerr << "Error receiving data from client.\n" << endl;
+            cerr << "Error receiving data from client.\r\n" << endl;
             break;
         }
     }
