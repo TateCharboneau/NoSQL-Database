@@ -56,7 +56,10 @@ bool ServerSocket::start(int port) {
 
 // accept and handle client communication
 void ServerSocket::run(RedisServer& server) {
-    while (true) {
+
+    bool serverRunning = true;
+
+    while (serverRunning) {
         sockaddr_in clientAddr;
         int clientAddrSize = sizeof(clientAddr);
         SOCKET clientSocket = accept(serverSocket, (sockaddr*)&clientAddr, &clientAddrSize);
@@ -66,13 +69,16 @@ void ServerSocket::run(RedisServer& server) {
             continue;
         }
 
-        handleClient(clientSocket, server);
+        if (!handleClient(clientSocket, server)) {
+            serverRunning = false;
+        }
+
         closesocket(clientSocket);
     }
 }
 
 //handle client communication
-void ServerSocket::handleClient(SOCKET clientSocket, RedisServer& server) {
+bool ServerSocket::handleClient(SOCKET clientSocket, RedisServer& server) {
     char buffer[1024];
     string userInput = "";
 
@@ -80,14 +86,14 @@ void ServerSocket::handleClient(SOCKET clientSocket, RedisServer& server) {
         int bytesReceived = recv(clientSocket, buffer, sizeof(buffer), 0);
 
         if (bytesReceived > 0) {
-            buffer[bytesReceived] = '\0';  // Null-terminate received data
-            userInput.append(buffer);  // Add the received data to userInput string
+            buffer[bytesReceived] = '\0';  // null-terminate
+            userInput.append(buffer);  // add the received data to userInput string
 
-            // Check if newline is present, meaning the command is complete
+            // check if newline is present e.g. command complete
             size_t pos = userInput.find('\n');
             if (pos != string::npos) {
-                userInput.erase(userInput.find_last_not_of("\r\n") + 1);  // Remove trailing whitespace
-                cout << "Received full command: " << userInput << endl;
+                userInput.erase(userInput.find_last_not_of("\r\n") + 1);  // remove trailing whitespace
+                cout << "Received command: " << userInput << endl;
 
                 // Process the command
                 if (userInput.substr(0, 3) == "SET") {
@@ -101,39 +107,45 @@ void ServerSocket::handleClient(SOCKET clientSocket, RedisServer& server) {
                     string key = userInput.substr(4);
                     string value = server.get(key);
                     if (value.empty()) {
-                        send(clientSocket, "ERROR: No key found", 19, 0);
+                        send(clientSocket, "ERROR: No key found\n", 19, 0);
                     } else {
-                        send(clientSocket, value.c_str(), value.size(), 0);
+                        string response = value + "\n";
+                        send(clientSocket, response.c_str(), response.size(), 0);
                     }
                 }
                 else if (userInput.substr(0, 3) == "DEL") {
                     string key = userInput.substr(4);
                     bool successful = server.del(key);
                     if (successful) {
-                        send(clientSocket, "OK", 2, 0);
+                        send(clientSocket, "OK\n", 2, 0);
                     } else {
-                        send(clientSocket, "ERROR: No key found", 19, 0);
+                        send(clientSocket, "ERROR: No key found\n", 19, 0);
                     }
                 }
-                else {
-                    send(clientSocket, "ERROR: Unknown command", 22, 0);
+                else if (userInput == "QUIT") {
+                    send(clientSocket, "Closing connection. Goodbye!\n", 29, 0);
+                    cout << "Client requested to quit. Closing connection." << endl;
+                    break;
                 }
-
-                // Clear the userInput buffer for the next command
-                userInput.clear();
+                else {
+                    send(clientSocket, "ERROR: Unknown command\n", 22, 0);
+                }
+                
+                userInput.clear(); // clear the userInput buffer for the next command
             }
         } 
         else if (bytesReceived == 0) {
-            // Connection closed gracefully by the client
-            cout << "Client disconnected." << endl;
+            // connection closed gracefully by the client
+            cout << "Client disconnected.\n" << endl;
             break;
         } 
         else {
-            // Error receiving data
-            cerr << "Error receiving data from client." << endl;
+            // error receiving data
+            cerr << "Error receiving data from client.\n" << endl;
             break;
         }
     }
 
-    closesocket(clientSocket);  // Clean up the client socket after handling
+    return false;
+    closesocket(clientSocket);
 }

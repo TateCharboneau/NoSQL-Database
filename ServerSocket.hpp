@@ -18,7 +18,7 @@ public:
 private:
     SOCKET serverSocket;
     bool initWinsock();
-    void handleClient(SOCKET clientSocket, RedisServer& server);
+    bool handleClient(SOCKET clientSocket, RedisServer& server);
 };
 
 #endif
