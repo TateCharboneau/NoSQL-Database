@@ -5,6 +5,9 @@
 #include <ws2tcpip.h> // socket handling
 #include <string>
 #include "RedisServer.hpp"
+#include <fstream>
+#include <sstream>
+#include <iostream>
 
 using namespace std;
 

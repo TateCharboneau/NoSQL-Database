@@ -7,6 +7,8 @@ int main() {
     RedisServer server;
     ServerSocket socketServer;
 
+    server.loadFromFile();
+
     if (!socketServer.start(8080)) {
         cerr << "Failed to start the server." << endl;
         return 1;

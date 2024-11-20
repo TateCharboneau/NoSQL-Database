@@ -17,3 +17,32 @@ string RedisServer::get(const string& key) const {
 bool RedisServer::del(const string& key) {
     return store.erase(key) != 0; // store.erase(key): Returns 1 if key found, 0 if not found
 }
+
+void RedisServer::saveToFile(const string& key, const string& value) {
+    ofstream file("database.txt", ios::app);
+    if (file.is_open()) {
+        file << key << " " << value << "\n";
+        file.close();
+    } 
+    else {
+        cerr << "Error: Could not open database.txt for writing." << endl;
+    }
+}
+
+void RedisServer::loadFromFile() {
+    ifstream file("database.txt");
+    if (file.is_open()) {
+        string line;
+        while (getline(file, line)) {
+            istringstream iss(line);
+            string key, value;
+            if (iss >> key >> value) {
+                store[key] = value;
+            }
+        }
+        file.close();
+    } 
+    else {
+        cerr << "Error: Could not open database.txt for reading." << endl;
+    }
+}

@@ -1,5 +1,4 @@
 #include "ServerSocket.hpp"
-#include <iostream>
 
 
 ServerSocket::ServerSocket() : serverSocket(INVALID_SOCKET) {}
@@ -101,6 +100,7 @@ bool ServerSocket::handleClient(SOCKET clientSocket, RedisServer& server) {
                     string key = userInput.substr(4, spacePos - 4);
                     string value = userInput.substr(spacePos + 1);
                     server.set(key, value);
+                    server.saveToFile(key, value);
                     send(clientSocket, "OK", 2, 0);
                 }
                 else if (userInput.substr(0, 3) == "GET") {
