@@ -6,6 +6,7 @@
 #include <iostream>
 #include <unordered_map>
 #include <string>
+#include <mutex>
 using namespace std;
 
 
@@ -22,6 +23,7 @@ public:
 
 private:
     unordered_map<string, string> store;
+    mutable mutex mtx;
 };
 
 #endif

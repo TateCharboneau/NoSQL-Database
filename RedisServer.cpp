@@ -3,10 +3,12 @@
 
 //basic functions
 void RedisServer::set(const string& key, const string& value) {
+    lock_guard<mutex> lock(mtx); // lock mutex
     store[key] = value;
 }
 
 string RedisServer::get(const string& key) const {
+    lock_guard<mutex> lock(mtx); // lock mutex
     auto cur = store.find(key);
     if (cur != store.end()) { // checks if cur = end of store
         return cur->second; // first stores key and second stores data value
@@ -15,6 +17,7 @@ string RedisServer::get(const string& key) const {
 }
 
 bool RedisServer::del(const string& key) {
+    lock_guard<mutex> lock(mtx); // lock mutex
     return store.erase(key) != 0; // store.erase(key): Returns 1 if key found, 0 if not found
 }
 
