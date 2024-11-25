@@ -55,5 +55,8 @@
         "xutility": "cpp",
         "fstream": "cpp",
         "sstream": "cpp"
-    }
+    },
+    "cSpell.words": [
+        "WSADATA"
+    ]
 }

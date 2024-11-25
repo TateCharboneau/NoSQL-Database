@@ -7,7 +7,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      The system is: Windows - 10.0.19045 - AMD64
+      The system is: Windows - 10.0.22631 - AMD64
   -
     kind: "message-v1"
     backtrace:
@@ -23,10 +23,10 @@ events:
       
       The output was:
       0
-      MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
-      Build started 11/15/2024 8:07:40 PM.
+      MSBuild version 17.12.6+db5f6012c for .NET Framework
+      Build started 11/20/2024 4:16:09 PM.
       
-      Project "C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\3.31.0-rc3\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      Project "C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\3.31.0\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
@@ -35,25 +35,25 @@ events:
         Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
         Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
       ClCompile:
-        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
         CMakeCCompilerId.c
       Link:
-        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
-        CompilerIdC.vcxproj -> C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\3.31.0-rc3\\CompilerIdC\\CompilerIdC.exe
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\3.31.0\\CompilerIdC\\CompilerIdC.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
         :VCEnd
-        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe
       FinalizeBuildStatus:
         Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
         Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
-      Done Building Project "C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\3.31.0-rc3\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      Done Building Project "C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\3.31.0\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
       
       Build succeeded.
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:01.28
+      Time Elapsed 00:00:01.69
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -61,7 +61,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
       
       The C compiler identification is MSVC, found in:
-        C:/Users/Paran/Desktop/Redis-From-Scratch/build/CMakeFiles/3.31.0-rc3/CompilerIdC/CompilerIdC.exe
+        C:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch/build/CMakeFiles/3.31.0/CompilerIdC/CompilerIdC.exe
       
   -
     kind: "message-v1"
@@ -78,10 +78,10 @@ events:
       
       The output was:
       0
-      MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
-      Build started 11/15/2024 8:07:42 PM.
+      MSBuild version 17.12.6+db5f6012c for .NET Framework
+      Build started 11/20/2024 4:16:11 PM.
       
-      Project "C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\3.31.0-rc3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      Project "C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\3.31.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
@@ -90,25 +90,25 @@ events:
         Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
         Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
       ClCompile:
-        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
         CMakeCXXCompilerId.cpp
       Link:
-        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
-        CompilerIdCXX.vcxproj -> C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\3.31.0-rc3\\CompilerIdCXX\\CompilerIdCXX.exe
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\3.31.0\\CompilerIdCXX\\CompilerIdCXX.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
         :VCEnd
-        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe
       FinalizeBuildStatus:
         Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
         Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
-      Done Building Project "C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\3.31.0-rc3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      Done Building Project "C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\3.31.0\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
       
       Build succeeded.
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:01.28
+      Time Elapsed 00:00:01.64
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -116,7 +116,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
       
       The CXX compiler identification is MSVC, found in:
-        C:/Users/Paran/Desktop/Redis-From-Scratch/build/CMakeFiles/3.31.0-rc3/CompilerIdCXX/CompilerIdCXX.exe
+        C:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch/build/CMakeFiles/3.31.0/CompilerIdCXX/CompilerIdCXX.exe
       
   -
     kind: "try_compile-v1"
@@ -127,8 +127,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Paran/Desktop/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-sotb9a"
-      binary: "C:/Users/Paran/Desktop/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-sotb9a"
+      source: "C:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-u64hdz"
+      binary: "C:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-u64hdz"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -137,40 +137,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Paran/Desktop/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-sotb9a'
+        Change Dir: 'C:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-u64hdz'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2ce41.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
-        Build started 11/15/2024 8:07:43 PM.
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c42d3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 11/20/2024 4:16:13 PM.
         
-        Project "C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sotb9a\\cmTC_2ce41.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u64hdz\\cmTC_c42d3.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_2ce41.dir\\Debug\\".
+          Creating directory "cmTC_c42d3.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sotb9a\\Debug\\".
-          Creating directory "cmTC_2ce41.dir\\Debug\\cmTC_2ce41.tlog\\".
+          Creating directory "C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u64hdz\\Debug\\".
+          Creating directory "cmTC_c42d3.dir\\Debug\\cmTC_c42d3.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_2ce41.dir\\Debug\\cmTC_2ce41.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_2ce41.dir\\Debug\\cmTC_2ce41.tlog\\unsuccessfulbuild".
+          Creating "cmTC_c42d3.dir\\Debug\\cmTC_c42d3.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_c42d3.dir\\Debug\\cmTC_c42d3.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2ce41.dir\\Debug\\\\" /Fd"cmTC_2ce41.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
-          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34123 for x64
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c42d3.dir\\Debug\\\\" /Fd"cmTC_c42d3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2ce41.dir\\Debug\\\\" /Fd"cmTC_2ce41.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c42d3.dir\\Debug\\\\" /Fd"cmTC_c42d3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sotb9a\\Debug\\cmTC_2ce41.exe" /INCREMENTAL /ILK:"cmTC_2ce41.dir\\Debug\\cmTC_2ce41.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Paran/Desktop/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-sotb9a/Debug/cmTC_2ce41.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Paran/Desktop/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-sotb9a/Debug/cmTC_2ce41.lib" /MACHINE:X64  /machine:x64 cmTC_2ce41.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_2ce41.vcxproj -> C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sotb9a\\Debug\\cmTC_2ce41.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u64hdz\\Debug\\cmTC_c42d3.exe" /INCREMENTAL /ILK:"cmTC_c42d3.dir\\Debug\\cmTC_c42d3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-u64hdz/Debug/cmTC_c42d3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-u64hdz/Debug/cmTC_c42d3.lib" /MACHINE:X64  /machine:x64 cmTC_c42d3.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_c42d3.vcxproj -> C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u64hdz\\Debug\\cmTC_c42d3.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_2ce41.dir\\Debug\\cmTC_2ce41.tlog\\unsuccessfulbuild".
-          Touching "cmTC_2ce41.dir\\Debug\\cmTC_2ce41.tlog\\cmTC_2ce41.lastbuildstate".
-        Done Building Project "C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sotb9a\\cmTC_2ce41.vcxproj" (default targets).
+          Deleting file "cmTC_c42d3.dir\\Debug\\cmTC_c42d3.tlog\\unsuccessfulbuild".
+          Touching "cmTC_c42d3.dir\\Debug\\cmTC_c42d3.tlog\\cmTC_c42d3.lastbuildstate".
+        Done Building Project "C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u64hdz\\cmTC_c42d3.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:01.24
+        Time Elapsed 00:00:01.59
         
       exitCode: 0
   -
@@ -183,7 +183,7 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe
+        linker tool for 'C': C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -198,8 +198,8 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.41.34123.0
+      Running the C compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.42.34433.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
   -
     kind: "try_compile-v1"
@@ -210,8 +210,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Paran/Desktop/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-ad23es"
-      binary: "C:/Users/Paran/Desktop/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-ad23es"
+      source: "C:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-x7bze2"
+      binary: "C:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-x7bze2"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -221,40 +221,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Paran/Desktop/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-ad23es'
+        Change Dir: 'C:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-x7bze2'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_dfb78.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
-        Build started 11/15/2024 8:07:45 PM.
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_1fbd5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.6+db5f6012c for .NET Framework
+        Build started 11/20/2024 4:16:15 PM.
         
-        Project "C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ad23es\\cmTC_dfb78.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x7bze2\\cmTC_1fbd5.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_dfb78.dir\\Debug\\".
+          Creating directory "cmTC_1fbd5.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ad23es\\Debug\\".
-          Creating directory "cmTC_dfb78.dir\\Debug\\cmTC_dfb78.tlog\\".
+          Creating directory "C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x7bze2\\Debug\\".
+          Creating directory "cmTC_1fbd5.dir\\Debug\\cmTC_1fbd5.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_dfb78.dir\\Debug\\cmTC_dfb78.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_dfb78.dir\\Debug\\cmTC_dfb78.tlog\\unsuccessfulbuild".
+          Creating "cmTC_1fbd5.dir\\Debug\\cmTC_1fbd5.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_1fbd5.dir\\Debug\\cmTC_1fbd5.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_dfb78.dir\\Debug\\\\" /Fd"cmTC_dfb78.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
-          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34123 for x64
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_1fbd5.dir\\Debug\\\\" /Fd"cmTC_1fbd5.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34433 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_dfb78.dir\\Debug\\\\" /Fd"cmTC_dfb78.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_1fbd5.dir\\Debug\\\\" /Fd"cmTC_1fbd5.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ad23es\\Debug\\cmTC_dfb78.exe" /INCREMENTAL /ILK:"cmTC_dfb78.dir\\Debug\\cmTC_dfb78.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Paran/Desktop/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-ad23es/Debug/cmTC_dfb78.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Paran/Desktop/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-ad23es/Debug/cmTC_dfb78.lib" /MACHINE:X64  /machine:x64 cmTC_dfb78.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_dfb78.vcxproj -> C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ad23es\\Debug\\cmTC_dfb78.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x7bze2\\Debug\\cmTC_1fbd5.exe" /INCREMENTAL /ILK:"cmTC_1fbd5.dir\\Debug\\cmTC_1fbd5.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-x7bze2/Debug/cmTC_1fbd5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch/build/CMakeFiles/CMakeScratch/TryCompile-x7bze2/Debug/cmTC_1fbd5.lib" /MACHINE:X64  /machine:x64 cmTC_1fbd5.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_1fbd5.vcxproj -> C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x7bze2\\Debug\\cmTC_1fbd5.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_dfb78.dir\\Debug\\cmTC_dfb78.tlog\\unsuccessfulbuild".
-          Touching "cmTC_dfb78.dir\\Debug\\cmTC_dfb78.tlog\\cmTC_dfb78.lastbuildstate".
-        Done Building Project "C:\\Users\\Paran\\Desktop\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ad23es\\cmTC_dfb78.vcxproj" (default targets).
+          Deleting file "cmTC_1fbd5.dir\\Debug\\cmTC_1fbd5.tlog\\unsuccessfulbuild".
+          Touching "cmTC_1fbd5.dir\\Debug\\cmTC_1fbd5.tlog\\cmTC_1fbd5.lastbuildstate".
+        Done Building Project "C:\\Users\\tatec\\OneDrive\\Desktop\\Coding Projects\\Redis-From-Scratch\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x7bze2\\cmTC_1fbd5.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:01.24
+        Time Elapsed 00:00:01.72
         
       exitCode: 0
   -
@@ -267,7 +267,7 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe
+        linker tool for 'CXX': C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -282,7 +282,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.41.34123.0
+      Running the CXX compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.42.34433.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
 ...

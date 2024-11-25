@@ -1,0 +1,10 @@
+^C:\USERS\TATEC\ONEDRIVE\DESKTOP\CODING PROJECTS\REDIS-FROM-SCRATCH\BUILD\CMAKEFILES\6FC390E41C935D679D77FD613557C400\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch" "-BC:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/tatec/OneDrive/Desktop/Coding Projects/Redis-From-Scratch/build/Redis-From-Scratch.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
