@@ -68,7 +68,7 @@ void ServerSocket::run(RedisServer& server) {
             continue;
         }
 
-        std::thread clientThread(&ServerSocket::handleClient, this, clientSocket, std::ref(server));
+        thread clientThread(&ServerSocket::handleClient, this, clientSocket, std::ref(server));
         clientThread.detach();  // detach the thread so it runs independently
     }
 }
@@ -143,6 +143,6 @@ bool ServerSocket::handleClient(SOCKET clientSocket, RedisServer& server) {
         }
     }
 
-    return false;
     closesocket(clientSocket);
+    return false;
 }
