@@ -4,6 +4,7 @@
 #include <winsock2.h> // socket handling
 #include <ws2tcpip.h> // socket handling
 #include <string>
+#include <thread>
 #include "RedisServer.hpp"
 #include <fstream>
 #include <sstream>
