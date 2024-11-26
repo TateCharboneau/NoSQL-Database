@@ -94,11 +94,16 @@ bool ServerSocket::handleClient(SOCKET clientSocket, RedisServer& server) {
                 // Process the command
                 if (userInput.substr(0, 3) == "SET") {
                     size_t spacePos = userInput.find(' ', 4);
+                    if (spacePos == string::npos || spacePos + 1 >= userInput.size()) {
+                        send(clientSocket, "ERROR: Missing key or value\r\n", 28, 0);
+                    }
+                    else {
                     string key = userInput.substr(4, spacePos - 4);
                     string value = userInput.substr(spacePos + 1);
                     server.set(key, value);
                     server.saveToFile(key, value);
                     send(clientSocket, "OK", 2, 0);
+                    }
                 }
                 else if (userInput.substr(0, 3) == "GET") {
                     string key = userInput.substr(4);
