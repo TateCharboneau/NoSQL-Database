@@ -106,29 +106,34 @@ bool ServerSocket::handleClient(SOCKET clientSocket, RedisServer& server) {
                     }
                 }
                 else if (userInput.substr(0, 3) == "GET") {
-                    if (userInput.size() <= 4) {
+                    if (userInput.size() <= 4 || userInput.substr(4).find_first_not_of(' ') == string::npos) {
                         send(clientSocket, "ERROR: Missing key\r\n", 20, 0);
-                    }
-                    string key = userInput.substr(4);
-                    string value = server.get(key);
-                    if (value.empty()) {
-                        send(clientSocket, "ERROR: No key found\r\n", 19, 0);
                     } 
                     else {
-                        string response = value + "\n";
-                        send(clientSocket, response.c_str(), response.size(), 0);
+                        string key = userInput.substr(4);
+                        string value = server.get(key);
+                        if (value.empty()) {
+                            send(clientSocket, "ERROR: No key found\r\n", 19, 0);
+                        } 
+                        else {
+                            string response = value + "\n";
+                            send(clientSocket, response.c_str(), response.size(), 0);
+                        }
                     }
                 }
                 else if (userInput.substr(0, 3) == "DEL") {
-                    if (userInput.size() <= 4) {
+                    if (userInput.size() <= 4 || userInput.substr(4).find_first_not_of(' ') == string::npos) {
                         send(clientSocket, "ERROR: Missing key\r\n", 20, 0);
-                    }
-                    string key = userInput.substr(4);
-                    bool successful = server.del(key);
-                    if (successful) {
-                        send(clientSocket, "OK\n", 2, 0);
-                    } else {
-                        send(clientSocket, "ERROR: No key found\r\n", 19, 0);
+                    } 
+                    else {
+                        string key = userInput.substr(4);
+                        bool successful = server.del(key);
+                        if (successful) {
+                            send(clientSocket, "OK\n", 2, 0);
+                        } 
+                        else {
+                            send(clientSocket, "ERROR: No key found\r\n", 19, 0);
+                        }
                     }
                 }
                 else if (userInput == "QUIT") {
