@@ -120,6 +120,9 @@ bool ServerSocket::handleClient(SOCKET clientSocket, RedisServer& server) {
                     }
                 }
                 else if (userInput.substr(0, 3) == "DEL") {
+                    if (userInput.size() <= 4) {
+                        send(clientSocket, "ERROR: Missing key\r\n", 20, 0);
+                    }
                     string key = userInput.substr(4);
                     bool successful = server.del(key);
                     if (successful) {
