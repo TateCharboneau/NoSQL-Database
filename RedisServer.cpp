@@ -22,6 +22,7 @@ bool RedisServer::del(const string& key) {
 }
 
 void RedisServer::saveToFile(const string& key, const string& value) {
+    lock_guard<mutex> lock(mtx); // lock mutex
     ofstream file("database.txt", ios::app);
     if (file.is_open()) {
         file << key << " " << value << "\n";
@@ -33,6 +34,7 @@ void RedisServer::saveToFile(const string& key, const string& value) {
 }
 
 void RedisServer::loadFromFile() {
+    lock_guard<mutex> lock(mtx); // lock mutex
     ifstream file("database.txt");
     if (file.is_open()) {
         string line;
