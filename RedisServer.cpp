@@ -1,7 +1,7 @@
 #include "RedisServer.hpp"
 
 
-//basic functions
+// basic functions
 void RedisServer::set(const string& key, const string& value) {
     lock_guard<mutex> lock(mtx); // lock mutex
     store[key] = value;
