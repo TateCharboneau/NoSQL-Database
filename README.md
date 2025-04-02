@@ -1,7 +1,7 @@
-﻿# Redis-From-Scratch
+﻿# NoSQL-Database
 
 ## Project Overview
-This project is a simplified Redis-like in-memory key-value store implemented in C++ with a Python client for interaction. It supports basic operations like `SET`, `GET`, and `DEL`, with data persistence to a file. The server handles multiple client connections using multithreading.
+This project is a simplified NoSQL in-memory key-value store implemented in C++ with a Python client for interaction. It supports basic operations like `SET`, `GET`, and `DEL`, with data persistence to a file. The server handles multiple client connections using multithreading.
 
 ## Features
 - **Basic Commands:**
