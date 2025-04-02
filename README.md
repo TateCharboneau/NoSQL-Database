@@ -1,7 +1,7 @@
 ﻿# NoSQL-Database
 
 ## Project Overview
-This project is a simplified NoSQL in-memory key-value store implemented in C++ with a Python client for interaction. It supports basic operations like `SET`, `GET`, and `DEL`, with data persistence to a file. The server handles multiple client connections using multithreading.
+This project is a simplified NoSQL in-memory key-value store implemented in C++ with a Python client for interaction, heavily inspired by Redis. It supports basic operations like `SET`, `GET`, and `DEL`, with data persistence to a file. The server handles multiple client connections using multithreading.
 
 ## Features
 - **Basic Commands:**
